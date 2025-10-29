@@ -1,0 +1,1005 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*****共通部分
+***********************************************/
+body {
+  font-family: “游ゴシック体“, YuGothic, “游ゴシック Medium”, “Yu Gothic Medium”,
+    “游ゴシック“, “Yu Gothic”, sans-serif;
+}
+
+/*****フッター*****/
+.footer-simple {
+  width: 100%;
+  background: #fafafa;
+  padding: 20px 0 10px 0;
+  
+}
+.footer-content {
+  display: flex;
+  align-items:center;
+  justify-content: flex-end;
+  gap: 18px;
+  padding-right: 40px;
+  margin: 0 auto;
+}
+.copyright {
+  color: #bbb;         
+  font-size: 0.98em;
+  letter-spacing: 0.06em;
+}
+
+.footer-divider {
+  display: inline-block;
+  width: 16px;
+  height: 1px;
+  background: #bbb;
+  opacity: 0.7;
+  margin: 0 4px;
+}
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.footer-icon img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+  vertical-align: middle;
+}
+.footer-icon img:hover {
+  opacity: 0.9;
+}
+
+/*****ヘッダー*****/
+:root {
+  --hero-ratio: 16/9;
+  --xfade-dur: 1s;
+}
+.main-visual {
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--hero-ratio);
+  max-width: none;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #000;
+  height: 100dvh;
+  isolation: isolate;
+}
+.main-visual-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.main-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.15);
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+.header-top h1 {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 150px;
+  color: white;
+}
+.main-navigation {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 100px;
+}
+.main-navigation ul {
+  display: flex;
+  gap:160px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.main-navigation li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  position:relative;
+  transition: color 0.2s;
+}
+.main-navigation li a:hover {
+  color: #ffbc32; 
+}
+.header-top h1,
+.main-navigation li a {
+  font-family: "Playfair Display", "Didot", "Bodoni MT", serif;
+  letter-spacing: 0.15em;
+}
+
+/*****ハンバーガーメニュー*****/
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1001;
+}
+.hamburger span {
+  height: 4px;
+  background: #fff;
+  border-radius: 2px;
+}
+.menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding-top: 60px;
+}
+.menu.open {
+  right: 0;
+}
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu li {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.menu li a {
+  display: flex;
+  align-items: center;
+  gap: 16px;      
+  text-decoration: none;
+  color: #222;
+  transition: background 0.2s;
+  padding: 8px 0;
+}
+.menu li a:hover {
+  background: rgba(0,0,0,0.05); 
+}
+.menu li img {
+  width: 30px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+.menu span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  font-family: "Playfair Display", "Didot", "Bodoni MT", serif;
+}
+
+
+/*****フッター*****/
+.footer-top {
+  display: flex;
+  justify-content: center;
+}
+
+
+/*****ニュース
+***********************************************/
+
+:root{
+  --footer-safe: 80px; 
+}
+
+.main-visual-news {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../images/news-bg1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.header-news {
+  position:relative;
+  padding: 20px;
+}
+.header-news h1 {
+  color: black;
+  font-size: 2em;
+  margin: 0;
+}
+.header-news h2 {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  color: black;
+  font-size: 3em;
+  margin: 0;
+}
+.category {
+  margin-top: 150px;
+  text-align: center;
+}
+.category ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0 0 0 100px;
+  margin: 0;
+}
+.category li a {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid black;
+  border-radius: 20px;
+  color: black;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+.category li a.active {
+  background: #222;
+  color: #fff;
+  border-color: #222;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); 
+}
+.main-visual-news .news-wrapper {
+  margin-top: 60px;     
+  margin-left: 100px;
+  margin-right: 60px;
+  width: 55%;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 20px;
+  height: clamp(260px, calc(100vh - 350px - var(--footer-safe)), 520px);
+  min-height: 240px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  backdrop-filter: blur(2px);
+}
+@media (max-width: 640px){
+  .main-visual-news .news-wrapper{
+    margin: 40px 16px 0 16px;  
+    width: auto;
+    height: 60vh;        
+  }
+}
+
+.news-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: background 0.2s;
+}
+.news-item-link:hover {
+  background: rgba(0,0,0,0.04);
+}
+.news-item {
+  display: flex;
+  align-items: flex-start; 
+  gap: 40px;                 
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  
+}
+.news-item-link:not(:last-child) .news-item {
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+
+.news-date {
+  min-width: 100px;
+  font-size: 0.9em;
+  color: gray;
+  margin: 0;
+}
+
+.news-title {
+  display: inline-block;
+  padding: 4px 12px;
+  margin: 0;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 0.85em;
+  color: black;
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+.news-title a:hover {
+  text-decoration: underline;
+}
+
+.news-content {
+  flex: 1; 
+  font-size: 1em;
+  margin: 0;
+}
+
+/*****ニュース 分类导览页
+***********************************************/
+.main-visual-newscatogory {
+  position: relative;
+  width: 100%;
+  padding-bottom: 80px;
+  background-image: url('../images/discography-bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.main-visual-newscatogory .news-wrapper {
+  margin-top: 80px;     
+  margin-right: 60px;  
+  max-width: 1200px;    
+}
+
+.news-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.news-detail {
+  display: flex;
+  padding: 16px 0;
+  position: relative;                
+}
+.news-item-texts {
+  flex: 1 1 0%;
+  min-width: 0;
+  padding: 12px 20px 12px 100px;
+  display: flex;
+  gap: 40px;
+  align-items: center;     
+}
+
+
+.news-date {
+  min-width: 100px;
+  font-size: 0.9em;
+  color: gray;
+  margin: 0;
+}
+
+.news-title {
+  display: inline-block;
+  padding: 4px 12px;
+  margin: 0;
+  border: 1px solid black;
+  border-radius: 20px;
+  font-size: 0.85em;
+  color: black;
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+.news-title a:hover {
+  text-decoration: underline;
+}
+
+.news-content {
+  flex: 1; 
+  font-size: 1em;
+  margin: 0;
+}
+.news-detail img {
+  width: 200px;             
+  max-width: 28vw;       
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin: 0;
+  margin-left: 18px;
+}
+
+
+/*****ニュース 分页内容
+***********************************************/
+.main-visual-newsdetail {
+  position: relative;
+  width: 100%;
+  padding-bottom: 80px;
+  background-image: url('../images/discography-bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.news-section {
+  max-width: 800px;
+  margin: 100px auto 60px auto;
+  padding: 2em;
+  flex-direction: column;
+  align-items: center;
+}
+.news-date {
+  display: flex;
+  color: #888;
+  font-size: 1em;
+  line-height: 1.2;
+  margin-bottom: 1em;
+  text-align: left;
+  gap: 1.8em;
+}
+.news-section h3 {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #1a1a1a;
+  text-align: left;
+  margin-bottom: 1.5em;
+  margin-top: 0;
+  letter-spacing: 0.01em;
+}
+.news-sections p {
+  font-size: 1.05em;
+  color: #232323;
+  margin: 1.1em 0;
+  text-align: left;
+  line-height: 1.95;
+  width: 100%;
+}
+.news-section img {
+  display: block;
+  max-width: 90%;
+  margin: 1.5em auto 1.2em auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.news-section a {
+  text-decoration: none;
+  color: #555;
+}
+.news-section a:hover {
+  color: black;           
+  text-decoration: underline;
+}
+.news-back {
+  display: inline-block;
+  margin-bottom: 3em;     
+  margin-top: 1.5em;        
+  color: #555;              
+  text-decoration: none;    
+  font-size: 1em;
+  letter-spacing: 0.08em;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.news-back:hover {
+  color: black;           
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .news-wrapper {
+    max-width: 97vw;
+    padding: 1.4em 0.8em;
+    margin: 0 auto;
+  }
+}
+
+/*****ディスコグラフィー
+***********************************************/
+.main-visual-discography {
+  position: relative;
+  width: 100%;
+  padding-bottom: 80px;
+  background-image: url('../images/discography-bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.header-discography {
+  position:relative;
+  padding: 20px;
+}
+.header-discography h1 {
+  color: black;
+  font-size: 2em;
+  margin: 0;;
+}
+.header-discography h2 {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  color: black;
+  font-size: 3em;
+  margin: 0;
+}
+.main-contents {
+  margin: 200px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  max-width: 1200px;
+}
+.card-link {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  text-decoration: none;
+  color: inherit;
+}
+.card {
+  background: rgba(255, 255, 255, 0.9);  
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card-text {
+  padding: 12px;
+}
+.card-text h3 {
+  font-size: 1em;
+  margin: 0 0 6px;
+}
+.card-text p {
+  font-size: 0.85em;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*****ディスコグラフィー 分页内容
+***********************************************/
+.main-discography {
+  max-width: 2000px;
+  margin: 40px 200px 40px 100px;
+  padding: 24px;
+}
+.card-link {
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #444;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.card-link:hover {
+  color: black;
+}
+.discography-contents {
+  display: flex;            
+  gap: 100px;               
+  align-items: flex-start;  
+}
+.discography-record {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.discography-contents img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  animation: spin 20s linear infinite;
+}
+.discography-record::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #111;
+  box-shadow: 0 0 6px rgba(0,0,0,0.4) inset;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.discography-record img:hover {
+  animation-play-state: paused;
+}
+.discography-right {
+  flex: 1;
+  min-width: 0;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+.discography-text {
+  flex: 1;
+  min-width: 0;
+}
+.disc-date-type {
+  color: #666;
+  font-size: 1em;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+.disc-title {
+  font-size: 1.48em;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #222;
+}
+.disc-summary {
+  font-size: 1.08em;
+  color: #333;
+  margin-bottom: 16px;
+}
+.disc-price {
+  font-size: 1.12em;
+  color: #D43B3B;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+.disc-list {
+  background: #fff;                 
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04); 
+  padding: 18px 22px;             
+  margin-bottom: 20px;           
+  max-width: 800px;    
+}
+
+.disc-list ol {
+  margin: 0;
+  padding-left: 10px;
+  list-style: decimal inside;                
+}
+
+.disc-list li {
+  padding: 12px 0;                 
+  border-bottom: 1px solid #e6e6e6; 
+  font-size: 1.07em;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.disc-list li:last-child {
+  border-bottom: none;
+}
+.discography-contents p {
+  line-height: 1.8;
+  margin-bottom: 14px;
+  color: #292b32;
+  font-size: 1em;
+}
+
+/*****バイオグラフィー
+***********************************************/
+.main-visual-biography {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../images/bio4.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header-biography {
+  position:relative;
+  padding: 20px;
+}
+.header-biography h1 {
+  color: white;
+  font-size: 2em;
+  margin: 0;;
+}
+.header-biography h2 {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  color: white;
+  font-size: 3em;
+  margin: 0;
+}
+.biography-text p {
+  margin-bottom: 1.5em;
+  line-height: 1.8;
+}
+.biography-text {
+  position: absolute;
+  top: 200px;             
+  right: 80px;           
+  width: 500px;
+  padding: 0;
+  background: none;
+  box-sizing: border-box;
+  height: calc(100vh - 135px - var(--footer-safe));
+  min-height: 240px;
+  color: #111;
+  font-size: 1em;
+  line-height: 1.8;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.biography-body{
+  height: 100%;              
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px 50px 28px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    black var(--fade-edge),
+    black calc(100% - var(--fade-edge)),
+    transparent 100%
+  );
+          mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    black var(--fade-edge),
+    black calc(100% - var(--fade-edge)),
+    transparent 100%
+  );
+}
+
+@media (max-width: 640px){
+  .biography-text{
+    right: 16px;         
+    left: 16px;          
+    width: auto;          
+    top: 140px;           
+    height: calc(100vh - 140px - var(--footer-safe));
+  }
+}
+
+:root{
+  --sb-thumb: rgba(0,0,0,.35);       
+  --sb-thumb-hover: rgba(0,0,0,.55); 
+  --sb-size: 8px;                    
+  --fade-edge: 10px;                
+}
+
+.main-visual-news .news-wrapper,
+.main-visual-biography .biography-body{
+  scrollbar-gutter: stable;
+
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+.main-visual-news .news-wrapper:hover,
+.main-visual-biography .biography-body:hover{
+  scrollbar-color: var(--sb-thumb) transparent;
+}
+
+.main-visual-news .news-wrapper::-webkit-scrollbar,
+.main-visual-biography .biography-body::-webkit-scrollbar{
+  width: var(--sb-size);
+  height: var(--sb-size);
+}
+.main-visual-news .news-wrapper::-webkit-scrollbar-thumb,
+.main-visual-biography .biography-body::-webkit-scrollbar-thumb{
+  background: var(--sb-thumb);
+  border-radius: 8px;
+  opacity: 0;                            
+  transition: opacity .2s ease, background .2s ease;
+}
+.main-visual-news .news-wrapper:hover::-webkit-scrollbar-thumb,
+.main-visual-biography .biography-body:hover::-webkit-scrollbar-thumb{
+  opacity: 1;
+}
+.main-visual-news .news-wrapper::-webkit-scrollbar-thumb:hover,
+.main-visual-biography .biography-body::-webkit-scrollbar-thumb:hover{
+  background: var(--sb-thumb-hover);
+}
+
+.scroll-hint-svg {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 6px;                     
+  display: flex; justify-content: center;
+  pointer-events: none;
+  opacity: .6;
+  animation: bounce 1.2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/*****スペシャル
+***********************************************/
+.main-visual-special {
+  display: block;
+  width: 100%;
+  background-image: url('../images/discography-bg.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+.header-special {
+  position:relative;
+  padding: 20px;
+}
+.header-special h1 {
+  color: black;
+  font-size: 2em;
+  margin: 0;;
+}
+.header-special h2 {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  color: black;
+  font-size: 3em;
+  margin: 0;
+}
+.special-title {
+  font-size: clamp(1.1rem, 1rem + 0.5vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: .02em;
+  line-height: 1.1;
+  margin: 2.5rem auto 0;         
+  max-width: 1280px;             
+  padding: 2.5em 2em 1em 2em;                
+  color: #111;
+}
+.special-flex-row {
+  display: grid;
+  grid-template-columns: 1fr minmax(520px, 52vw);
+  align-items: start;
+  gap: 32px;
+  min-width: 1280px;
+  margin: 1rem auto 2.5rem;
+  padding: 0 4em;
+  box-sizing: border-box;
+}
+.text-wrapper {
+  margin :0;
+  width: auto;
+  padding: 0;
+}
+.text-wrapper p.introduce {
+  font-size: 1em;
+  line-height: 1.8em;
+  margin: 0 0 1.25rem 0;
+  text-align: justify;
+  padding: 0;
+}
+
+.song-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.song-card {
+  --radius: 14px;
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+  color: #111;
+}
+
+.song-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.song-card .year {
+  font-size: .9rem;
+  color: #555;
+}
+
+.song-card p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.song-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.12);
+}
+
+.song-card:nth-child(1) {
+  background: linear-gradient(135deg, rgba(250,250,250,.92), rgba(245,245,245,.72));
+}
+.song-card:nth-child(2) {
+  background: linear-gradient(135deg, rgba(235,235,235,.88), rgba(232,232,232,.66));
+}
+.song-card:nth-child(3) {
+  background: linear-gradient(135deg, rgba(220,220,220,.84), rgba(215,215,215,.60));
+}
+
+@media (max-width: 980px){
+  .special-title{ padding: 0 1.5em; }
+  .special-flex-row{
+    grid-template-columns: 1fr;
+    padding: 0 1.5em;
+    gap: 20px;
+  }
+  .song-cards{ grid-template-columns: 1fr; }
+}
+.video-wrapper {                 
+  justify-self: end;              
+  width: 100%;
+  aspect-ratio: 16 / 9;             
+}
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  border-radius: 12px;              
+}
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 2em;
+  background-color: #fafafa;
+  position:relative;
+}
+.slider-track {
+  display: flex;
+  width: calc(300px * 20); 
+  animation: scroll 40s linear infinite;
+}
+.slider-track img {
+  width: 300px;
+  height: auto;
+  margin-right: 0.2em;
+  object-fit: cover;
+}
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (max-width: 900px) {
+  .special-flex-row {
+    flex-direction: column;
+    gap: 2em;
+  }
+  .text-wrapper, iframe {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .main-visual-special {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}

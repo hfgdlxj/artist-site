@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>Utada Hikaru</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- ヘッダー　-->
+        <section class="main-visual" aria-label="Hero video">
+            <video
+                id="heroVideo"
+                class="main-visual-video"
+                playsinline
+                muted
+                autoplay
+                loop
+                preload="metadata"
+                poster="images/poster.jpg"
+                aria-hidden="true">
+
+                <source src="video/0902宇多田ヒカル２.mp4"  type="video/mp4" />
+            </video>
+            <div class="main-visual-overlay"></div>
+        </section>
+
+        <header class="header-top">
+            <h1>宇多田ヒカル&nbsp;&nbsp;&nbsp;<span>UTADA HIKARU</span></h1>
+        </header>
+
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="discography.html">DISCOGRAPHY</a></li>
+                <li><a href="biography.html">BIOGRAPHY</a></li>
+                <li><a href="special.html">SPECIAL</a></li>
+            </ul>
+        </nav>
+
+        <!-- ハンバーガーメニュー　-->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="menu" class="menu">
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <img src="images/minihome.jpg" alt="home mini">
+                        <span>HOME</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="news.html">
+                        <img src="images/mininews.jpg" alt="news mini">
+                        <span>NEWS</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="discography.html">
+                        <img src="images/minidiscography.jpg" alt="discography mini">
+                        <span>DISCOGRAPHY</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="biography.html">
+                        <img src="images/minibiography.jpg" alt="biography mini">
+                        <span>BIOGRAPHY</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="special.html">
+                        <img src="images/minispecial.jpg" alt="special mini">
+                        <span>SPECIAL</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <script src="js/javascript.js"></script>
+
+
+        <!-- フッター　-->
+        <footer class="footer-simple">
+            <div class="footer-content">
+                <span class="copyright">©Sony Music Labels Inc. ALL RIGHT RESERVED.</span>
+                <span class="footer-divider"></span>
+                <div class="footer-icons">
+                    <a href="https://x.com/utadahikaru" target="_blank" class="footer-icon">
+                    <img src="https://simpleicons.org/icons/x.svg" alt="x">
+                    </a>
+                    <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fkuma_power%2F&is_from_rle" target="_blank" class="footer-icon">
+                        <img src="https://simpleicons.org/icons/instagram.svg" alt="instagram">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UChcgcbX3zMBwd0wTJyy2JlA" target="_blank" class="footer-icon">
+                        <img src="https://simpleicons.org/icons/youtube.svg" alt="YouTube">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    
+    </body>
+</html>
